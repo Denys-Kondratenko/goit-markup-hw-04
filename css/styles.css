@@ -13,6 +13,7 @@
   --filter-background-color: #f5f4fa;
   --header-border: #ececec;
   --filter-item-border: #eeeeee;
+  --hero-background-color: #c4c4c4;
 }
 
 p,
@@ -140,6 +141,9 @@ body {
 }
 
 .contacts-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   padding-top: 32px;
   padding-bottom: 32px;
   font-weight: 500;
@@ -155,10 +159,31 @@ body {
   color: var(--accent-color);
 }
 
+.icon-envelope,
+.icon-smartphone {
+  fill: var(--primary-color);
+}
+
+.contacts-link:hover .icon-envelope,
+.contacts-link:hover .icon-smartphone {
+  fill: var(--accent-color);
+}
+
 /* -----------------------------------Hero------------------------------------- */
 
 .hero {
-  background-color: var(--sacondary-background-color);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/img-bg.jpg);
+  background-color: var(--hero-background-color);
+  max-width: 1600px;
+  min-height: 600px;
+  margin: 0 auto;
   padding: 200px 0;
   text-align: center;
 }
@@ -371,6 +396,8 @@ body {
 .filter-btn:focus {
   color: var(--wite-color);
   background-color: var(--accent-background-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-list {
@@ -383,7 +410,10 @@ body {
   flex-basis: calc((100% - 60px) / 3);
 }
 
-.portfolio-img {
+.portfolio-item:hover,
+.portfolio-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-item-box {
